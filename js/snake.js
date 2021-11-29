@@ -31,7 +31,7 @@ function appleMove(){
 
 function setup() {
     let canvas = createCanvas(widthCanvas, heightCanvas);
-    canvas.parent("snakeDiv")
+    canvas.parent("p5Div")
     frameRate(8)
     textFont(myFont)
     xPos = snakeSize * 10//snakeSize * Math.floor(Math.random() * widthCanvas/snakeSize);

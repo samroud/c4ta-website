@@ -11,14 +11,16 @@
 </head>
 <body>
     
-    
     <div class="projects">
 
         <!--Navigation bar-->
         <div id="nav-placeholder">
         </div>
 
+        <div class="project">
+            <div id="p5Div"></div>
         
+        </div>
 
     </div>
 
@@ -26,11 +28,20 @@
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
+<script src="js/p5.min.js"></script>
+<script src="js/texttopoint.js"></script>
+
+
 <!--Navigation bar-->
 <script>
     $(function(){
       $("#nav-placeholder").load("menu.html");
     });
+    
+    menuActive = function(color){
+        let selectionMenu = document.querySelector("#texttopoint")
+        selectionMenu.style.color = color
+    }
 </script>
 
 </html>

@@ -2,7 +2,7 @@ var instanceSinCos = function( sketch ) {
 
   sketch.setup = function() {
     let canvas = sketch.createCanvas(600, 600);
-    canvas.parent("sincosDiv")
+    canvas.parent("p5Div")
     sketch.frameRate(20)
   }
   

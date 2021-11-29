@@ -8,7 +8,7 @@
 }
 
 *{
-    font-size: 14px;
+    font-size: 15px;
     font-family: "font-mono";
 }
   
@@ -44,5 +44,24 @@ p{
     margin: 0;
 }
 
+.menu ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.menu ul li{
+    display: inline;
+    margin-right: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+a:hover, a:focus {
+    color: #0f0;
+    text-decoration: underline;
+}
 
   

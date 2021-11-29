@@ -11,14 +11,19 @@
 </head>
 <body>
     
-    
     <div class="projects">
 
         <!--Navigation bar-->
         <div id="nav-placeholder">
         </div>
 
-        
+        <div class="project">
+            <div id="p5Div"></div>
+            <p>Use you keyboard: ➡️ ⬅️ ⬆️ ⬇️</p>
+            <p>Score: <span id="score">1</span></sp></p>
+            <p>Collisions: <span id="collision">0</span></sp></p>
+            <p>Positions: <span id="positions"></span></sp></p>
+        </div>
 
     </div>
 
@@ -26,11 +31,20 @@
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
+<script src="js/p5.min.js"></script>
+<script src="js/snake.js"></script>
+
+
 <!--Navigation bar-->
 <script>
     $(function(){
       $("#nav-placeholder").load("menu.html");
     });
+    
+    menuActive = function(color){
+        let selectionMenu = document.querySelector("#snake")
+        selectionMenu.style.color = color
+    }
 </script>
 
 </html>
