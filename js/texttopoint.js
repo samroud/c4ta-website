@@ -3,7 +3,7 @@ var instanceTextToPoint = function( sketch ) {
 
 let font;
   sketch.preload = function() {
-    font = sketch.loadFont('../font/font.otf')
+    font = sketch.loadFont('../font/font.woff')
   };
 
   let points;
