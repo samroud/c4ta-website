@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'font-mono';
+    src: url('font/font-mono.woff2') format('woff2'),
+        url('font/font-mono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    font-size: 14px;
+    font-family: "font-mono";
+}
+  
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+
+.projects{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.project{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+canvas {
+    display: block;
+    margin-top: 10px;
+    border: 1px #fff solid;
+}
+
+p{
+    margin: 0;
+}
+
+
+  
