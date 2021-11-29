@@ -36,6 +36,10 @@ canvas {
     border: 1px #fff solid;
 }
 
+h1{
+    margin-bottom: 20px;
+}
+
 p{
     margin: 0;
 }
