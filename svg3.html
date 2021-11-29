@@ -56,7 +56,7 @@
             twrk.res = window.innerHeight / twrk.height;
             twrk.width = window.innerWidth / twrk.res;
         }
-        twrk.center = { x: twrk.width / 2, y: twrk.height / 2 -20 };
+        twrk.center = { x: twrk.width / 2, y: twrk.height / 2 -30 };
     }
     twrk.scale({ height: 120 });
 
@@ -167,11 +167,11 @@
             let position = {x: x, y: y}
             let path = svg.dots(position)
             let opacity = simplex.noise2D(0, (time/speedEffects) * i)
-            let size = simplex.noise2D(0, (time/speedEffects) * i)
+            let size = simplex.noise2D(0, (time/speedEffects) * i) +3
             console.log(size)
             dom["dot"+i].setAttributeNS(null, "d", path)
             dom["dot"+i].setAttributeNS(null, "stroke-width", size * 100)
-            dom["dot"+i].style.opacity = opacity
+            dom["dot"+i].style.opacity = opacity + 0.1
         }
 
         

@@ -16,7 +16,7 @@ let a = 0;
 function draw() {
   background(0);
 
-  let fontPoints = font.textToPoints('S', 0, 0, 500, {
+  let fontPoints = font.textToPoints('S', 0, 0, 600, {
     sampleFactor: 1,
     simplifyThreshold: 0
   });
@@ -31,7 +31,7 @@ function draw() {
     // let mapY = map(sin(a), -1, 1, -10, 10);
     // posX += mapX*i/100
     // posY += mapY*i/100
-    translate(posX + width/2 - 160, posY + height/1.15, 1)
+    translate(posX + width/2 - 160, posY + height/1.3, 1)
     ellipse(cos(a * i) * 55, sin(a * i) , 2)
     pop()
   }

@@ -75,8 +75,8 @@ p{
 
 .menu a:hover, .menu a:focus {
     color: #000;
-    border-color: #0f0;
-    background-color: #0f0;
+    border-color: #fff;
+    background-color: #fff;
     transition: background-color 0.5s ease;
 }
 

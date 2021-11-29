@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C4TA Samuel Perroud</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="#">
+
+</head>
+<body>
+    
+    
+    <div class="projects">
+
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+
+        <div class="project">
+            <div id="p5Div"><img src="img/drawbot1.gif" width="100%"></div>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+<!--Navigation bar-->
+<script>
+    $(function(){
+      $("#nav-placeholder").load("menu.html");
+    });
+    
+    menuActive = function(color){
+        let selectionMenu = document.querySelector("#drawbot1")
+        selectionMenu.style.color = color
+        selectionMenu.style.borderColor = color
+    }
+</script>
+</html>
