@@ -10,6 +10,11 @@
 
 
     <style>
+        @font-face {
+        font-family: "font";
+        src: url("font/font-mono.woff");
+        }
+
         stage,
         svg,
         path {
@@ -78,14 +83,6 @@
         return output;
     };
 
-    svg.paths = function (ia) {
-        let output = "";
-        for (var i = 0; i < ia.length; i++) {
-            output += svg.path(ia[i]);
-        }
-        return output;
-    };
-
     svg.makeLayer = function ({ parent, id, x = 0, y = 0 }) {
         dom[id] = document.createElementNS(svg.nameSpace, "svg");
         dom[id].id = id;
@@ -113,13 +110,6 @@
         parent.appendChild(dom[id]);
     };
 
-    //drehung
-    lineRotation = function ({ point }) {
-        return [
-            // { x: 0, y: 0 },
-            { x: point.x, y: point.y}
-        ];
-    };
 
     //DOM
 
@@ -137,43 +127,19 @@
     let simplex = new SimplexNoise();
 
     //drawing
-
-    let step = 1;
-    let stepY = 2;
-    let resolution = 0.015;
-    let speed = 0.0005;
-
-    svg.makeLine({ parent: dom.svgLayer, id: "lines", cap: "round", stroke: 0.5, color: "#0f0", d: "" });
-
-    function loop(time) {
-
-        let collect = []; //[[{x: 10, y: 10}, {x: 20, y: 20}], [{x: 10, y: 10}, {x: 20, y: 20}], [{x: 10, y: 10}, {x: 20, y: 20}]];
-
-        for (let y = 0; y < 10; y++) {
-            
-            let position = { x: -50, y: (y * stepY) + 10};
-
-            for (let x = 0; x < 100; x++) {
-
-                let noiseY = simplex.noise2D(x * resolution, time * speed);
-                console.log(noiseY)
-                let distance = 10 //(1 + simplex.noise3D(y * resolution, x * resolution, time * speed)) * 10;
-
-                collect.push(lineRotation({
-                    point: { x: position.x + x * step, y: position.y * noiseY}
-                }));
-            }
+    let step = 1
+    let position = {x: -50, y: -50}
+    let resolution = 0.035;
+    let amplification = 2;
+    for (let y = 0; y < 100; y++){
+        for (let x = 0; x < 100; x++){
+            let noiseX = simplex.noise2D(x * resolution, y * resolution) * amplification;
+            let noiseY = simplex.noise2D(y * resolution, x * resolution) * amplification;
+            svg.makeLine({ parent: dom.svgLayer, id: "punkt", cap: "round", stroke: 0.6, color: "#fff", d: svg.path([{ x: position.x + x * step + noiseX, y: position.y + y * step + noiseY }]) })
         }
-
-        dom["lines"].setAttributeNS(null, "d", svg.paths(collect));
-
-        requestAnimationFrame(loop);
-
-    };
-
-    loop(0);
-
-
+    }
+    // svg.makeShape({ parent: dom.svgLayer, id: "form", stroke: 1, color: "#f00", d: svg.path([{ x: -30, y: -50 }, { x: 50, y: 30 }, { x: -50, y: 30 }]) })
+    // svg.makeLine({ parent: dom.svgLayer, id: "linie", stroke: 1, color: "#f0f", d: svg.path([{ x: -50, y: -50 }, { x: 50, y: 30 }]) })
 
 
 </script>
@@ -186,7 +152,7 @@
     });
     
     menuActive = function(color){
-        let selectionMenu = document.querySelector("#svg5")
+        let selectionMenu = document.querySelector("#svg10")
         selectionMenu.style.color = color
         selectionMenu.style.borderColor = color
         selectionMenu.style.backgroundColor = "#fff"
