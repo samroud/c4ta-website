@@ -33,7 +33,6 @@ html, body {
 canvas {
     display: block;
     margin-top: 10px;
-    border: 1px #fff solid;
 }
 
 h1{

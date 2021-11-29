@@ -17,7 +17,7 @@ let collision = 0
 
 let myFont
 function preload(){
-myFont = loadFont('../font/font.woff')
+myFont = loadFont('../font/font.otf')
 }
 let textSnake = ["S","N","A","K","E"]
 let textSnakeNum
