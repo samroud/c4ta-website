@@ -6,6 +6,7 @@ class Cell{
     }
     show(){
       noStroke()
+      fill(0)
       rect(this.pos.x,this.pos.y,this.size)
       push()
       translate(this.pos.x,this.pos.y)

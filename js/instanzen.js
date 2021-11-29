@@ -20,8 +20,6 @@ function setup(){
 }
 
 function draw(){
-  //background(220)
-
   //grid
   for (let i = 0; i < grid.length; i += 1){
     let currentCell = grid[i]
