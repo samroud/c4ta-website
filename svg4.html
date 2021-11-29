@@ -56,7 +56,7 @@
             twrk.res = window.innerHeight / twrk.height;
             twrk.width = window.innerWidth / twrk.res;
         }
-        twrk.center = { x: twrk.width / 2, y: twrk.height / 2 -20 };
+        twrk.center = { x: twrk.width / 2, y: twrk.height / 2 -50 };
     }
     twrk.scale({ height: 120 });
 
@@ -141,7 +141,7 @@
     let position = {x: 0, y: 0}
     let path = svg.dots(position)
 
-    svg.makeLine({ parent: dom.svgLayer, d: path, id: "dot", color: "#f0f", stroke: 5, cap: "round", x: 0, y: 0 });
+    svg.makeLine({ parent: dom.svgLayer, d: path, id: "dot", color: "#ff0", stroke: 10, cap: "round", x: 0, y: 0 });
 
 
     let simplex = new SimplexNoise();
