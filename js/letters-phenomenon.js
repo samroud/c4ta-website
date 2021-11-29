@@ -4,7 +4,7 @@ let myText = []
 //Load font
 let myFont
 function preload(){
-  myFont = loadFont('../font/font.woff')
+  myFont = loadFont('./font/font-mono.woff')
 }
 
 function setup(){

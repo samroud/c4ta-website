@@ -1,6 +1,6 @@
 let font;
 function preload() {
-  font = loadFont('../font/font.woff')
+  font = loadFont('./font/font-mono.woff')
 }
 
 let points;
